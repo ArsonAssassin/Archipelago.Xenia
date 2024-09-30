@@ -2,12 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Version>0.1.0</Version>
+    <Authors>ArsonAssassin</Authors>
+    <Product>Archipelago.Xenia</Product>
+    <PackageId>Archipelago.Xenia</PackageId>
+    <Description>A class library for interfacing between Xenia emulator and Archipelago Multiworld Randomiser.</Description>
+    <RepositoryUrl>https://github.com/ArsonAssassin/Archipelago.Xenia</RepositoryUrl>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-
+  <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Archipelago.Core" Version="0.0.5" />
+    <PackageReference Include="Archipelago.Core" Version="0.1.0" />
   </ItemGroup>
 
 </Project>

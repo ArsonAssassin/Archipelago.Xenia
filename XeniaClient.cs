@@ -11,15 +11,21 @@ namespace Archipelago.Xenia
     public class XeniaClient : IGameClient
     {
         public bool IsConnected { get; set; }
-        public int ProcId { get; set; } = Memory.XENIA_PROCESSID;
+        public int ProcId { get; set; }
+        public string ProcessName { get; set; }
+        public XeniaClient()
+        {
 
+            ProcessName = "Xenia";
+            ProcId = Memory.GetProcIdFromExe(ProcessName);
+        }
         public bool Connect()
         {
-            Console.WriteLine("Connecting to Xenia");
+            Console.WriteLine($"Connecting to {ProcessName}");
             var pid = ProcId;
             if (pid == 0)
             {
-                Console.WriteLine("Xenia not found.");
+                Console.WriteLine($"{ProcessName} not found.");
                 Console.WriteLine("Press any key to exit.");
                 Console.Read();
                 System.Environment.Exit(0);
